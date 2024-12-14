@@ -26,6 +26,7 @@ html:not([data-scroll="0"]) .navbar {
   z-index: 3;
 }
 
+
 html:not([data-scroll="0"]) .navbar>div>div {
   height: 3rem;
 }
@@ -389,4 +390,29 @@ html {
 
 .manage > div:nth-child(2) h3 {
   color: #747474;
+}
+
+
+@keyframes slideUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
 }
