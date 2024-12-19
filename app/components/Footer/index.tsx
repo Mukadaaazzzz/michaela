@@ -59,7 +59,7 @@ const Footer = () => {
                 {/* Footer Bottom */}
                 <div className="mt-12 pt-6 border-t border-gray-800 text-center">
                     <p className="text-gray-400">
-                        © {new Date().getFullYear()} Michaela Prundu. All rights reserved.
+                        © {new Date().getFullYear()} Mihaela Prundu. All rights reserved.
                     </p>
                 </div>
             </div>

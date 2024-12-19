@@ -13,7 +13,7 @@ const Aboutdata: datatype[] = [
     {
         heading: "About Me",
         imgSrc: "/images/aboutus/imgOne.svg",
-        paragraph: 'Hi, I’m Michaela Prundu. I specialize in helping men rebuild confidence, navigate relationship challenges, and find meaningful connections.',
+        paragraph: 'Hi, I’m Mihaela Prundu. I specialize in helping men rebuild confidence, navigate relationship challenges, and find meaningful connections.',
         link: 'Learn more'
     },
     {
@@ -36,7 +36,7 @@ const Aboutus = () => {
             <div className='mx-auto max-w-7xl px-4 py-24 my-32 lg:px-10 bg-lightgrey rounded-3xl relative'>
                 <Image src="/images/aboutus/dots.svg" width={100} height={100} alt="dots-image" className="absolute bottom-1 -left-20" />
                 <h3 className='text-center text-blue text-lg tracking-widest'>ABOUT ME</h3>
-                <h4 className='text-center text-4xl lg:text-65xl font-bold'>Know More About Michaela.</h4>
+                <h4 className='text-center text-4xl lg:text-65xl font-bold'>Know More About Mihaela.</h4>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-16 gap-x-16 lg:gap-x-32'>
                     {Aboutdata.map((item, i) => (
                         <div key={i} className='hover:bg-navyblue bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group'>
