@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const WorkWithMe = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-24 mb-40">
+    <div className="bg-gradient-to-b from-gray-50 to-white py-14 mb-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
