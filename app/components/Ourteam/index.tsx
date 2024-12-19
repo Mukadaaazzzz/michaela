@@ -1,16 +1,26 @@
-import Image from "next/image";
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image"; 
 
-
-const index = () => {
+const Index = () => {
     return (
-        <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 m-32'>
-            <h2 className="text-4xl sm:text-65xl font-bold text-center">Our team belives you deserve <br /> only the best.</h2>
-            <h3 className="text-2xl font-medium text-center pt-10 opacity-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br /> eiusmod tempor.</h3>
-            <div className='grid grid-cols-1 my-16'>
-                <Image src="/images/team/teamimg.png" alt="office-image" height={684} width={1296} />
+        <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 my-32 shadow-lg">
+            <h2 className="text-4xl sm:text-5xl font-bold text-center">
+                Rebuilding Relationships, <br /> One Step at a Time.
+            </h2>
+            <h3 className="text-2xl font-medium text-center pt-10 opacity-75">
+                I believe you deserve fulfilling connections. Whether you're starting fresh or navigating challenges, I am here to guide you.
+            </h3>
+            <div className="grid grid-cols-1 my-16">
+                <Image
+                    src="/images/team/coaching.jpg"
+                    alt="coaching-session"
+                    height={684}
+                    width={1296}
+                    className="rounded-xl" // Adds rounded corners
+                />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default index;
+export default Index;

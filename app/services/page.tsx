@@ -1,139 +1,206 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
+import { Check, Heart, Clock, Star, Phone, Mail, MessageCircle } from "lucide-react";
+
 
 const RelationshipServices = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const features = [
+    "Gain deeper understanding of relationship patterns",
+    "Develop effective communication tools",
+    "Align relationships with your authentic self",
+    "Overcome emotional barriers",
+    "Build lasting trust and connection",
+    "Create sustainable relationship habits"
+  ];
+
+  const services = [
+    {
+      title: "Quick Clarity Coaching",
+      subtitle: "Single Session",
+      price: "$99.99",
+      duration: "60 minutes",
+      description: "Perfect for tackling a specific challenge with immediate, actionable insights.",
+      features: [
+        "One-on-one focused coaching",
+        "Concrete action steps",
+        "Follow-up resources",
+        "Email support"
+      ],
+      accent: "from-pink-600 to-rose-600"
+    },
+    {
+      title: "Connection Reset",
+      subtitle: "3-Session Package",
+      price: "$249.99",
+      duration: "3 × 60 minutes",
+      description: "A structured program to establish healthier relationship patterns and habits.",
+      features: [
+        "Three personalized sessions",
+        "Progress tracking",
+        "Custom action plans",
+        "Priority email support",
+        "Relationship toolkit access"
+      ],
+      accent: "from-blue-600 to-indigo-600",
+      featured: true
+    },
+    {
+      title: "Personalized Transformation",
+      subtitle: "Complete Coaching Experience",
+      price: "Starting at $399.99",
+      duration: "Custom timeline",
+      description: "A comprehensive coaching journey for profound personal transformation.",
+      features: [
+        "Fully customized program",
+        "Regular check-ins",
+        "24/7 messaging support",
+        "Exclusive resources",
+        "Lifetime access to materials"
+      ],
+      accent: "from-purple-600 to-indigo-600"
+    }
+  ];
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
-    <div className="bg-gray-50 py-16 px-6">
-      {/* Intro Section */}
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-          Transform Your Relationships with Expert Guidance
-        </h1>
-        <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-          Whether you're facing challenges in your relationship, seeking clarity 
-          on how to navigate love, or ready to embark on a transformative journey 
-          toward deeper connections, our coaching services are tailored to meet 
-          your needs. Explore personalized options to unlock meaningful insights, 
-          actionable strategies, and long-lasting change in your love life.
-        </p>
-      </div>
-
-      {/* Explanation Section */}
-      <div className="mt-12 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 text-center">
-          Why Choose Relationship Coaching?
-        </h2>
-        <div className="mt-6 space-y-6 text-gray-600 leading-relaxed">
-          <p>
-            Relationships are at the core of human experience, yet they often 
-            come with complexities that can feel overwhelming. Coaching provides 
-            a structured, supportive space where you can:
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              Gain a deeper understanding of your patterns and how they influence 
-              your relationships.
-            </li>
-            <li>
-              Develop tools to enhance communication, rebuild trust, and foster 
-              connection.
-            </li>
-            <li>
-              Clarify your goals and values to ensure your relationships align 
-              with your authentic self.
-            </li>
-            <li>
-              Overcome challenges such as unresolved conflict, misaligned 
-              expectations, or emotional barriers.
-            </li>
-          </ul>
-          <p>
-            Coaching is not just about solving immediate issues; it's about 
-            equipping you with skills to navigate relationships confidently, 
-            authentically, and joyfully.
-          </p>
-        </div>
-      </div>
-
-      {/* Choosing the Right Service */}
-      <div className="mt-16 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 text-center">
-          Which Service Is Right for You?
-        </h2>
-        <div className="mt-6 space-y-6 text-gray-600 leading-relaxed">
-          <p>
-            We offer a variety of services designed to meet you where you are 
-            in your relationship journey:
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              **Quick Clarity Coaching:** Ideal for individuals who need 
-              immediate insights and actionable advice on specific challenges.
-            </li>
-            <li>
-              **Connection Reset (Short Coaching Package):** A focused plan 
-              for those looking to address recurring issues, build better habits, 
-              and create lasting improvements.
-            </li>
-            <li>
-              **Deep Connection Coaching (Personalized Package):** For those 
-              ready to invest in profound transformation with fully customized 
-              sessions and tailored action plans.
-            </li>
-          </ul>
-          <p>
-            Not sure where to start? During your initial conversation, we'll 
-            explore your unique situation and guide you toward the best 
-            path forward.
-          </p>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {[
-          {
-            title: "Single Session: Quick Clarity Coaching",
-            price: "$100",
-            details:
-              "A one-time, 60-minute session to address a specific challenge.",
-            link: "https://calendly.com", // Replace with actual link
-          },
-          {
-            title: "Short Coaching Package: Connection Reset",
-            price: "$270 (3 Sessions)",
-            details:
-              "Three focused sessions to build healthier relationship habits.",
-            link: "https://calendly.com", // Replace with actual link
-          },
-          {
-            title: "Personalized Transformation Coaching",
-            price: "Starting at $800",
-            details:
-              "A fully tailored coaching experience for profound transformation.",
-            link: "https://calendly.com", // Replace with actual link
-          },
-        ].map((service, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 text-center"
-          >
-            <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-            <p className="mt-4 text-blue-600 text-lg font-semibold">
-              {service.price}
-            </p>
-            <p className="mt-2 text-gray-600">{service.details}</p>
-            <a
-              href={service.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300"
-            >
-              Book Session
-            </a>
+    <div className="bg-gradient-to-b from-gray-50 to-white py-10 mb-40">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Hero Section */}
+        <div className="text-center max-w-4xl mx-auto">
+          <div className="flex items-center justify-center space-x-2 mb-6">
+            <Heart className="text-rose-500" size={24} />
+            <span className="text-rose-500 font-semibold">Transform Your Love Life</span>
           </div>
-        ))}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Expert Guidance for Deeper Connections
+          </h1>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Whether you're facing challenges or seeking deeper connections, our coaching 
+            services provide the guidance you need for meaningful, lasting transformation.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-start space-x-3">
+              <div className="flex-shrink-0 h-6 w-6 rounded-full bg-blue-100 flex items-center justify-center">
+                <Check className="h-4 w-4 text-blue-600" />
+              </div>
+              <p className="text-gray-600">{feature}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Services Cards */}
+        <div className="mt-24 grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${
+                service.featured ? 'ring-2 ring-blue-600 transform lg:-translate-y-4' : ''
+              }`}
+            >
+              {service.featured && (
+                <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg text-sm font-medium">
+                  Most Popular
+                </div>
+              )}
+              <div className={`h-2 bg-gradient-to-r ${service.accent}`} />
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <p className="text-gray-500">{service.subtitle}</p>
+                  </div>
+                  <Clock className="text-gray-400" size={20} />
+                </div>
+                <div className="mb-6">
+                  <span className="text-3xl font-bold text-gray-900">{service.price}</span>
+                  <span className="text-gray-500 ml-2">{service.duration}</span>
+                </div>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3 text-gray-600">
+                      <Star className="h-4 w-4 text-yellow-400" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  onClick={openModal}
+                  className={`inline-block w-full text-center py-3 px-6 rounded-xl font-semibold text-black bg-gradient-to-r ${service.accent} hover:opacity-90 transition duration-300`}
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Discovery Session Section */}
+        <div className="mt-24 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Not Sure Where to Start?</h2>
+          <p className="text-gray-600 mb-8">
+            Schedule a free 15-minute consultation to discuss your needs and find the perfect path forward.
+          </p>
+          <Link href="/booksession" passHref>
+  <button
+    className="inline-block bg-blue-600 text-black font-semibold py-3 px-8 rounded-xl hover:bg-blue-500 transition duration-300"
+  >
+    Schedule Free Discovery Session
+  </button>
+</Link>
+        </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+            <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
+            <p className="text-gray-600 mb-6">Choose your preferred way to connect and schedule a session:</p>
+            <div className="space-y-4">
+              <a
+                href="https://wa.me/+14169536994"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-green-600 hover:text-green-500"
+              >
+                <MessageCircle size={20} />
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="mailto:nely_prundu@yahoo.com"
+                className="flex items-center space-x-3 text-blue-600 hover:text-blue-500"
+              >
+                <Mail size={20} />
+                <span>Email</span>
+              </a>
+              <a
+                href="tel:+14169536994"
+                className="flex items-center space-x-3 text-gray-600 hover:text-gray-500"
+              >
+                <Phone size={20} />
+                <span>Direct Call</span>
+              </a>
+            </div>
+            <button
+              onClick={closeModal}
+              className="mt-6 w-full bg-gray-800 text-black py-2 rounded-lg hover:bg-gray-700"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

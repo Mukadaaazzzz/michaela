@@ -11,6 +11,8 @@
 body {
   margin: 0;
   font-family: 'Urbanist', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html:not([data-scroll="0"]) .navbar {
@@ -23,7 +25,8 @@ html:not([data-scroll="0"]) .navbar {
   transition: 0.4s linear;
   padding: 0px !important;
   /* height: 20px; */
-  z-index: 3;
+  z-index: 4;
+
 }
 
 
@@ -38,6 +41,8 @@ html:not([data-scroll="0"]) .border-right {
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .navbar {

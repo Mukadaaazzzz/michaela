@@ -19,7 +19,7 @@ const Aboutdata: datatype[] = [
     {
         heading: "Services",
         imgSrc: "/images/aboutus/pp.svg",
-        paragraph: 'From personalized coaching to group programs and confidence workshops, my services are designed to guide you through every step of your relationship journey.',
+        paragraph: 'From personalized coaching to exclusive packages, my services are designed to guide you through every step of your relationship journey.',
         link: 'Learn more'
     },
     {

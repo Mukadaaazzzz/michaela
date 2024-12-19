@@ -1,146 +1,100 @@
-"use client"
-import Slider from "react-slick";
-import React, { Component } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-// CAROUSEL DATA
-
-interface DataType {
-    time: string;
-    heading: string;
-    heading2: string;
-    date: string;
-    imgSrc: string;
-    name: string;
+interface BlogPost {
+  id: number;
+  title: string;
+  date: string;
+  excerpt: string;
+  image: string;
+  slug: string;
 }
 
-const postData: DataType[] = [
+const Articles = () => {
+  const blogPosts: BlogPost[] = [
     {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article.png',
+      id: 1,
+      title: "5 Proven Steps to Rebuild Confidence After a Breakup",
+      date: "November 18, 2024",
+      excerpt: "Discover actionable strategies to regain self-esteem and rebuild your confidence post-breakup.",
+      image: "/images/blogs/confidence.jpg",
+      slug: "/blogpage/rebuild-confidence",
     },
     {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article2.png',
+      id: 2,
+      title: "The Ultimate Guide to First Dates: How to Make a Great Impression",
+      date: "August 7, 2024",
+      excerpt: "Nail your first date with confidence! Learn expert-backed tips to connect and impress.",
+      image: "/images/blogs/first-date-tips.jpg",
+      slug: "/blogpage/first-date-tips",
     },
     {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article3.png',
+      id: 3,
+      title: "How to Identify and Avoid Red Flags in Relationships",
+      date: "May 23, 2024",
+      excerpt: "Protect your heart by learning how to spot relationship red flags before it's too late.",
+      image: "/images/blogs/red-flags.jpg",
+      slug: "/blogpage/red-flags",
     },
-    {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article.png',
-    },
-    {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article2.png',
-    },
-    {
-        time: "5 min",
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Published on Startupon",
-        date: 'August 19, 2021',
-        imgSrc: '/images/articles/article3.png',
-    },
-]
+  ];
 
-// CAROUSEL SETTINGS
+  const featuredPosts = blogPosts.slice(0, 2);
 
+  return (
+    <div className="bg-gradient-to-b from-gray-100 to-gray-50 py-16 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-10">
+          Explore My Blog
+        </h2>
+        <p className="text-lg text-gray-600 text-center mb-10">
+          Stay informed and inspired with the latest tips, advice, and insights from Michaela.
+        </p>
 
-export default class MultipleItems extends Component {
-
-    render() {
-        const settings = {
-            dots: false,
-            infinite: true,
-            slidesToShow: 3,
-            // centerMode: true,
-            slidesToScroll: 2,
-            arrows: false,
-            autoplay: false,
-            speed: 500,
-            cssEase: "linear",
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                }
-            ]
-        };
-
-
-        return (
-            <div className="bg-lightgrey py-20" id="blog-section">
-                <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 '>
-
-                    <div className="text-center">
-                        <h3 className="text-blue text-lg font-normal tracking-widest">ARTICLES</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold">Our latest post.</h3>
-                    </div>
-
-
-                    <Slider {...settings}>
-                        {postData.map((items, i) => (
-                            <div key={i} >
-
-                                <div className='bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative'>
-                                    <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="inline-block m-auto" />
-
-                                    <Link href="/">
-                                        <h3 className="absolute bg-blue text-white hover:bg-black hover:shadow-xl py-3 px-6 rounded-full article-img">{items.time} read</h3>
-                                    </Link>
-                                    <h4 className='text-2xl font-bold pt-6 text-black'>{items.heading}</h4>
-                                    <h4 className='text-2xl font-bold pt-1 text-black'>{items.heading2}</h4>
-
-                                    <div>
-                                        <h3 className='text-base font-normal pt-6 pb-2 opacity-75'>{items.name}</h3>
-                                        <h3 className='text-base font-normal pb-1 opacity-75'>{items.date}</h3>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {featuredPosts.map((post) => (
+            <div
+              key={post.id}
+              className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="relative">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <span className="absolute top-4 right-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full shadow-md">
+                  {post.date}
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                  {post.title}
+                </h3>
+                <p className="text-gray-600 mt-4">{post.excerpt}</p>
+                <Link
+                  href={post.slug}
+                  className="inline-block mt-6 text-blue-600 font-semibold hover:underline"
+                >
+                  Read More &rarr;
+                </Link>
+              </div>
             </div>
+          ))}
+        </div>
 
-        );
-    }
-}
+        <div className="text-center mt-12">
+          <Link
+            href="/blogpage"
+            className="inline-block bg-blue-600 text-black px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
+          >
+            View All Blogs
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Articles;

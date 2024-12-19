@@ -1,6 +1,7 @@
 "use client"
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
@@ -14,11 +15,11 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'About Us', href: '#aboutus-section', current: false },
-    { name: 'Services', href: '#services-section', current: false },
+    { name: 'About Me', href: '/about-me', current: false },
+    { name: 'Services', href: '/services', current: false },
     { name: 'FAQ', href: '#faq-section', current: false },
-    { name: 'Blog', href: '#blog-section', current: false },
-    { name: 'Testimonial', href: '#testimonial-section', current: false },
+    { name: 'Blog', href: '/blogpage', current: false },
+    { name: 'Testimonial', href: '/success-stories', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -26,7 +27,6 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
@@ -37,15 +37,21 @@ const Navbar = () => {
                         <div className="flex flex-1 items-center sm:justify-between">
 
                             {/* LOGO */}
-
                             <div className="flex flex-shrink-0 items-center border-right">
-                                <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                                    Desgy Solutions
+                                <Link href="/" className="flex items-center">
+                                    <Image
+                                        src="/images/logo.png"
+                                        alt="logo"
+                                        width={150}
+                                        height={80}
+                                        priority
+                                        className="h-auto w-auto object-contain"
+                                        quality={100}
+                                    />
                                 </Link>
                             </div>
 
                             {/* LINKS */}
-
                             <div className="hidden lg:flex items-center border-right ">
                                 <div className="flex justify-end space-x-4">
                                     {navigation.map((item) => (
@@ -62,27 +68,26 @@ const Navbar = () => {
                                         </Link>
                                     ))}
                                 </div>
-
                             </div>
-                            {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Contact us</button> */}
-                            <Contactusform />
+                            
+                            {/* WORK WITH ME BUTTON */}
+                            <Link 
+                                href="/workwithme" 
+                                className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'
+                            >
+                                Work With Me
+                            </Link>
                         </div>
 
-
                         {/* DRAWER FOR MOBILE VIEW */}
-
-                        {/* DRAWER ICON */}
-
                         <div className='block lg:hidden'>
                             <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
                         </div>
 
                         {/* DRAWER LINKS DATA */}
-
                         <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
                             <Drawerdata />
                         </Drawer>
-
                     </div>
                 </div>
             </>
