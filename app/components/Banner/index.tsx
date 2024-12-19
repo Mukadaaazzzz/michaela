@@ -81,7 +81,7 @@ const Banner = () => {
 
             {/* Content container */}
             <div className="relative min-h-screen flex items-center ">
-                <div className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className={`w-full max-w-7xl mx-auto px-4 sm:px-6  lg:px-8 py-20 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <div className="max-w-3xl">
                         {/* Animated badge */}
                         <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 animate-pulse">
