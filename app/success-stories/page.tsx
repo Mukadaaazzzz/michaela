@@ -7,7 +7,7 @@ const SuccessStories = () => {
     {
       name: "Vezeteu Daniel",
       title: "Rebuilding Confidence After Heartbreak",
-      story: `I came to Michaela after a painful breakup that left me doubting my self-worth. Through consistent coaching, I learned to heal emotionally, regain my confidence, and approach relationships with a new sense of purpose. Today, I describe myself as more open, resilient, and emotionally aware than ever before. I'm now in a happy, thriving relationship built on trust and understanding.`,
+      story: `I came to Mihaela after a painful breakup that left me doubting my self-worth. Through consistent coaching, I learned to heal emotionally, regain my confidence, and approach relationships with a new sense of purpose. Today, I describe myself as more open, resilient, and emotionally aware than ever before. I'm now in a happy, thriving relationship built on trust and understanding.`,
       highlights: [
         "Rediscovered self-confidence",
         "Overcame emotional barriers",
@@ -17,7 +17,7 @@ const SuccessStories = () => {
     {
       name: "Bogdan Mihaila",
       title: "Finding Direction and Emotional Balance",
-      story: `Before working with Michaela, I was struggling to balance my career and personal life. I felt disconnected and unsure of how to express myself in relationships. Michaela's coaching helped me create clarity and actionable steps to prioritize what truly matters. Now, I'm thriving in my career and have built deeper connections with my loved ones.`,
+      story: `Before working with Mihaela, I was struggling to balance my career and personal life. I felt disconnected and unsure of how to express myself in relationships. Michaela's coaching helped me create clarity and actionable steps to prioritize what truly matters. Now, I'm thriving in my career and have built deeper connections with my loved ones.`,
       highlights: [
         "Achieved work-life balance",
         "Improved communication skills",
@@ -27,7 +27,7 @@ const SuccessStories = () => {
     {
       name: "David Christopher",
       title: "Rediscovering Self-Worth After Divorce",
-      story: `After a difficult divorce, I felt like I had lost my sense of identity. Michaela helped me navigate my emotions, rebuild my self-esteem, and rediscover my passions. Today, I'm focused on self-growth and have cultivated a life that reflects my true values.`,
+      story: `After a difficult divorce, I felt like I had lost my sense of identity. Mihaela helped me navigate my emotions, rebuild my self-esteem, and rediscover my passions. Today, I'm focused on self-growth and have cultivated a life that reflects my true values.`,
       highlights: [
         "Recovered from divorce",
         "Found new passions",
@@ -37,7 +37,7 @@ const SuccessStories = () => {
     {
       name: "Mihai Rosu",
       title: "Transforming Communication in Marriage",
-      story: `I was facing communication challenges in my marriage that were creating a distance between me and my partner. With Michaela's guidance, I learned effective communication techniques and emotional awareness. Today, my wife and I describe our marriage as stronger and more connected than ever.`,
+      story: `I was facing communication challenges in my marriage that were creating a distance between me and my partner. With Mihaela's guidance, I learned effective communication techniques and emotional awareness. Today, my wife and I describe our marriage as stronger and more connected than ever.`,
       highlights: [
         "Enhanced communication",
         "Rebuilt trust",
@@ -63,7 +63,7 @@ const SuccessStories = () => {
           </div>
         </div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-          Hear how Michaela's coaching has transformed lives. Real people, real
+          Hear how Mihaela's coaching has transformed lives. Real people, real
           growth, real impact.
         </p>
       </div>

@@ -47,7 +47,7 @@ const Articles = () => {
           Explore My Blog
         </h2>
         <p className="text-lg text-gray-600 text-center mb-10">
-          Stay informed and inspired with the latest tips, advice, and insights from Michaela.
+          Stay informed and inspired with the latest tips, advice, and insights from Mihaela.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
